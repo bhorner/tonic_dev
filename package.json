@@ -1,0 +1,13 @@
+{
+  "name": "tonic_dev",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "~4.9.0",
+    "jade": "~1.6.0",
+    "node-sass": "0.9.0"
+  }
+}

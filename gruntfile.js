@@ -27,7 +27,7 @@ module.exports = function(grunt) {
           authKey: 'key1'
         },
         src: 'public/',
-        dest: '/domains/madhousedev.com/html/deploy/',
+        dest: '/domains/madhousedev.com/html/tonic/',
         exclusions: ['path/to/source/folder/**/.DS_Store', 'path/to/source/folder/**/Thumbs.db', 'path/to/dist/tmp']
       }
     }

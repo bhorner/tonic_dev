@@ -1,4 +1,5 @@
-$dark-blue: #354246;
+$body-blue: #354246;
+$dark-blue: #273033;
 $light-blue: #50888f;
 $yellow: #fcd47c;
 $green: #9ec4a7;
@@ -7,24 +8,16 @@ $tan: #dbd5b7;
 $text-color: #fff;
 $link-color: $yellow;
 
+$font: "proxima-nova", sans-serif;
+
+
 body{
   margin:0;
-  font-family: 'Helvetica Neue', sans-serif;
-  padding:80px;
-  display: none;
-  background: $dark-blue;
-
-  h1{
-    margin:0 auto;
-    z-index:0;
-    text-align:center;
-    font-size:3em;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    color: $text-color;
-  }
-  
+  font-family: $font;
+  background: $body-blue;
+  color: $text-color;
   h1, iframe{
-    margin:0 auto;
+    margin: 0 auto;
   }
   a {
   	color:$link-color;
@@ -34,8 +27,84 @@ body{
   }
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: $font;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+h3 {font-size: 1.4em}
 iframe{
   background:#fff;
   display:block;
   height:300px;
 }
+
+nav.main-nav {
+  li {
+    float: none;
+    display: inline;
+    
+    a {
+      float: none;
+      display: inline-block;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+}
+
+nav.main-nav ul.nav {
+  width: 100%;
+  text-align: center;
+}
+h5.tag {
+  font-size: .9em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+#logo {
+  width: 200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.services {
+  .row {margin: 0;}
+  h1 {color: #fff;margin-bottom: 20px}
+  div {padding: 0;}
+  img {width: 100%;}
+  .title {padding-left: 40px;padding-top: 20px;}
+}
+
+.light-blue {background: $light-blue;}
+.yellow {
+  background: $yellow;
+  h5.tag {color: #6c6559;}
+}
+.green {background: $green;}
+.tan {background: $tan;}
+.dark-blue {
+  background: $dark-blue;
+  h5.tag {color: #a5d8de;}
+}
+#main {
+    padding: 60px 0;
+
+}
+#content {
+  h2 {color: $text-color;font-size: 2em; margin-top: 10px; margin-bottom: 30px}
+  p {color: $text-color;font-size: 1.2em;line-height: 1.8em;}
+  h5.tag {color: $light-blue}
+
+}
+
+.heading {
+    padding: 20px;
+    h5.tag {color: rgba(255,255,255,.7);}
+    h3 {margin:5px 0 0 0;font-size: 1.4em}
+  }

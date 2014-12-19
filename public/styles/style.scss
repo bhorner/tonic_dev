@@ -1,0 +1,41 @@
+$dark-blue: #354246;
+$light-blue: #50888f;
+$yellow: #fcd47c;
+$green: #9ec4a7;
+$tan: #dbd5b7;
+
+$text-color: #fff;
+$link-color: $yellow;
+
+body{
+  margin:0;
+  font-family: 'Helvetica Neue', sans-serif;
+  padding:80px;
+  display: none;
+  background: $dark-blue;
+
+  h1{
+    margin:0 auto;
+    z-index:0;
+    text-align:center;
+    font-size:3em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: $text-color;
+  }
+  
+  h1, iframe{
+    margin:0 auto;
+  }
+  a {
+  	color:$link-color;
+  }
+  p {
+  	color: $text-color;
+  }
+}
+
+iframe{
+  background:#fff;
+  display:block;
+  height:300px;
+}

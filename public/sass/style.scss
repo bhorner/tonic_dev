@@ -22,11 +22,12 @@ body{
   a {
   	color:$link-color;
   }
+  a:hover {text-decoration: none;}
   p {
   	color: $text-color;
   }
 }
-
+.load {opacity: 0;}
 h1, h2, h3, h4, h5 {
   font-family: $font;
   text-transform: uppercase;
@@ -51,10 +52,15 @@ nav.main-nav {
       color: #fff;
       text-transform: uppercase;
       font-weight: 700;
+      font-size: 1.1em;
+      letter-spacing: 1px;
     }
   }
+  button .icon-bar {
+    background: #fff;
+  }
 }
-
+#page-banner {margin-bottom: 20px;}
 nav.main-nav ul.nav {
   width: 100%;
   text-align: center;
@@ -68,20 +74,27 @@ h5.tag {
   margin-bottom: 0;
   margin-top: 0;
 }
-#logo {
-  width: 200px;
+a#logo {
+  width: 150px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 40px 0 20px 0;
+  display: block;
 }
 .services {
+  margin-bottom: 60px;
   .row {margin: 0;}
   h1 {color: #fff;margin-bottom: 20px}
-  div {padding: 0;}
+  >div>a {padding: 0; display: block;}
   img {width: 100%;}
-  .title {padding-left: 40px;padding-top: 20px;}
+  .title {padding-left: 40px;padding-top: 20px;position: relative;z-index: 2;}
 }
 
-.light-blue {background: $light-blue;}
+.light-blue {
+  background: $light-blue;
+  .heading {
+    h5.tag {color: #a5d8de;}
+  }
+}
 .yellow {
   background: $yellow;
   h5.tag {color: #6c6559;}
@@ -96,15 +109,222 @@ h5.tag {
     padding: 60px 0;
 
 }
+#banner.flexslider {
+  opacity: 0;
+  h1 {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    font-size: 3.6em;
+  }
+  li {}
+}
 #content {
+  padding-right: 40px;
   h2 {color: $text-color;font-size: 2em; margin-top: 10px; margin-bottom: 30px}
-  p {color: $text-color;font-size: 1.2em;line-height: 1.8em;}
+  p, ul li {color: $text-color;font-size: 1.2em;line-height: 1.8em;}
   h5.tag {color: $light-blue}
+  h3 {margin: 30px 0 20px 0;}
+  ul {padding-left: 15px;}
+  .upcoming.heading {
+    padding:0;
+    margin-top: 40px;
+    h3 {margin-top: 5px;}
+    h5.tag {color: #a5d8de;}
+    .mf {
+      h5.tag {color: #fff;}
+      p {
+        font-size: 1em;
+        line-height: 1em;
+        margin:0;
+      }
+    }
+  }
 
 }
-
+.cover {
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right:0;
+  opacity: 0;
+-webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.row>a:hover .cover {
+  opacity: .5;
+}
 .heading {
-    padding: 20px;
-    h5.tag {color: rgba(255,255,255,.7);}
-    h3 {margin:5px 0 0 0;font-size: 1.4em}
+    padding: 30px 40px;
+    margin-bottom: 3px;
+    display: block;
+    color: #fff;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    h5.tag {color: #a5d8de;}
   }
+a.heading:hover {
+  background: $green;
+  color: $dark-blue;
+    h5.tag {color: $dark-blue;}
+    div {border-bottom: 1px solid $dark-blue;}
+}
+h3 {margin:5px 0 0 0;font-size: 1.3em}
+
+.offer {
+  div {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #a5d8de;
+    float: left;
+    width: 100%;
+  }
+  ul {padding-left: 16px;padding-top: 5px;clear: both;}
+}
+.box {
+  padding: 40px;
+  box-sizing: border-box;
+  h3 {margin-bottom: 20px;}
+}
+.map {padding-right:0;}
+#studio, #links {padding: 60px 0;}
+
+.col-sm-6.studio-slider {
+  padding-right: 0;
+  .flexslider {
+    background-image: url(./images/studio.jpg); 
+    background-repeat: center center;
+    background-position: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }
+}
+.banner-bg {
+  background-image: url(../images/yoga-banner.jpg); 
+    background-repeat: center center;
+    background-position: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    h1 {padding: 60px 0;}
+}
+.col-sm-6.studio-info {
+  padding-left: 3px;
+}
+.instructor-img {
+  background-image: url(../images/instructor.jpg); 
+  background-repeat: center center;
+  background-position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+a.classes {
+  background-image: url(../images/bb.jpg); 
+  background-repeat: center center;
+  background-position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+}
+
+.col-sm-6.classes {
+  padding:0;
+  div {position: absolute;bottom: 0;padding: 20px;width: 100%;}
+}
+#quote {
+  margin: 60px 0;
+  h5.tag {color: $light-blue}
+  p.quote {
+    font-size: 1.8em;
+    font-style: italic;
+    font-weight: 100;
+    margin-top: 10px;
+}
+}
+#footer {
+  padding: 60px 0;
+  margin-top: 60px;
+  h3 {margin-bottom: 20px; margin-top: 60px;}
+  p, h3, h5.tag {color:$light-blue;}
+  .address p {margin: 20px 0 0 5px;}
+  p {font-size: 1.2em;}
+}
+.lines {
+  div {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $light-blue;
+    float: left;
+    width: 100%;
+  }
+}
+.nav>li>a:hover, .nav>li>a:focus {
+  background: none;
+  color: $light-blue;
+}
+.form-control {
+  height: 40px;
+  border-radius: 0;
+}
+.newsletter {
+  p {margin-bottom: 20px;}
+  button.btn {
+    background: $green;
+    position: absolute;
+    right:0;
+    top: 0;
+    width: 40px;
+    bottom: 0;
+    border:none;
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  nav.main-nav {
+    .navbar-nav {margin: 10px 0;}
+    li {
+      float: left;
+      display: block;
+      width: 100%;
+      
+      a {
+        float: left;
+        display: block;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        width: 100%;
+
+      }
+    }
+    button .icon-bar {
+      background: #fff;
+    }
+  }
+  #banner.flexslider {
+    h1 {
+      padding-top: 80px;
+      font-size: 2.2em;
+    }
+  }
+}
